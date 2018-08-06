@@ -18,5 +18,7 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
+# 1.0.1
+ > index page done and sell artwork done
+ 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.

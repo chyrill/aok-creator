@@ -89,12 +89,17 @@
                             <v-flex xs12>
                                 <v-slider v-model="donation" thumb-label="always" min="20" @change="changeDonation"/>
                             </v-flex>
+                            <v-flex xs12>
+                                <v-select label="Auction Duration" :items="durationDate" v-model="duration" />
+                            </v-flex>
                         </v-layout>            
                     </v-container>
                 </v-card-text>
                 <v-card-actions>
-                    <v-btn class="_btn" dark color="cyan lighten-1">Submit</v-btn>
-                    <v-btn class="_btn" @click="step = step - 1" outline>Previous</v-btn>
+                    <div style="text-align: center">
+                        <v-btn class="_btn" dark color="cyan lighten-1">Submit</v-btn>
+                        <v-btn class="_btn" @click="step = step - 1" outline>Previous</v-btn>
+                    </div>
                 </v-card-actions>
             </v-card>
         </v-stepper-content>
@@ -116,7 +121,9 @@ export default {
         width: '',
         height: '',
         donation: 20,
-        donationPrice: ''
+        donationPrice: '',
+        durationDate: [],
+        duration: ''
     }),
     methods: {
         getYearList() {
@@ -129,15 +136,21 @@ export default {
             this.yearList = year;
         },
         changeDonation () {
-            this.donationPrice = this.price * (this.donation/100)
+            this.donationPrice = Math.floor(this.price * (this.donation/100))
         },
         goToStep3 () {
             this.step = this.step + 1
             this.changeDonation()
+        },
+        insertDurationDate () {
+            for (var i = 1; i <= 30; i++) {
+                this.durationDate.push(i)
+            }
         }
     },
     mounted() {
         this.getYearList()
+        this.insertDurationDate()
     }
 }
 </script>
