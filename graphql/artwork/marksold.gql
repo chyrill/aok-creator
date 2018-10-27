@@ -1,0 +1,9 @@
+mutation marksold($id: ID!) {
+    marksold(id: $id) {
+        Successful
+        Model {
+            _id
+        }
+        Message
+    }
+}

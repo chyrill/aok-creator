@@ -1,0 +1,36 @@
+mutation updateartwork($_id: ID!, $pictures: [String], $title: String, $price: Float, $description: String, $year: String, $distanceUnit: String, $width: Float, $length: String, $height: Float, $medium: String, $campaignId: String, $pledge: Float, $auctionDuration: Float, $address1: String, $address2: String, $city: String, $state: String, $postalCode: String, $country: String, $weight: Float, $weightUnit: String){
+    updateartwork(data: {
+        _id: $_id
+        pictures: $pictures
+        title: $title
+        price: $price
+        description: $description
+        year: $year
+        distanceUnit: $distanceUnit
+        width: $width
+        length: $length
+        height: $height
+        medium: $medium
+        campaignId: $campaignId
+        pledge: $pledge
+        auctionDuration: $auctionDuration
+        address1: $address1
+        address2: $address2
+        city: $city
+        state: $state
+        postalCode: $postalCode
+        country: $country
+        weight: $weight
+        weightUnit: $weightUnit
+    }) {
+        Successful
+        Message 
+        Model {
+            _id
+            pictures
+            title
+            price
+            medium
+        }
+    }
+}

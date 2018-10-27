@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "name": "Paper Cut",
+      "value": "papercut",
+      "id": 1
+    },
+    {
+      "name": "Modern",
+      "value": "modern",
+      "id": 2
+    },
+    {
+      "name": "Photography",
+      "value": "photography",
+      "id": 3
+    },
+    {
+      "name": "Contemporary",
+      "value": "contemporary",
+      "id": 4
+    },
+    {
+      "name": "Digital Arts",
+      "value": "digitalart",
+      "id": 5
+    },
+    {
+      "name": "Abstract",
+      "value": "abstract",
+      "id": 6
+    },
+    {
+      "name": "Drawing",
+      "value": "drawing",
+      "id": 7
+    },
+    {
+      "name": "Architecture",
+      "value": "architecture",
+      "id": 8
+    }
+  ]
+}

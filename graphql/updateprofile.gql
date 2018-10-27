@@ -1,0 +1,65 @@
+mutation updateprofile($lastName: String!, $firstName: String!, $alias: String, $displayPicture: String, $profileBanner: String, $_id: ID!, $city: String!, $country: String!, $birthdate: String!, $gender: String, $description: String!, $category: String, $address1: String, $state: String, $postalCode: String, $address2: String) {
+    updateprofile(data: {
+        lastName: $lastName
+        firstName: $firstName
+        alias: $alias
+        birthdate: $birthdate
+        city: $city
+        country: $country
+        _id: $_id
+        profileBanner: $profileBanner
+        displayPicture: $displayPicture
+        category: $category
+        gender: $gender
+        description: $description
+        address1: $address1
+        address2: $address2
+        state: $state
+        postalCode: $postalCode
+    }) {
+        profile {
+            fullName
+            firstName
+            lastName
+            displayPicture
+            profileBanner
+            description
+            alias
+            birthdate
+            country
+            city
+            address1
+            address2
+            state
+            postalCode
+        }
+        artworks{
+            _id
+            title
+            year
+            price
+            measurement
+            width
+            height
+            charity {
+                _id
+                name
+            }
+            pledge
+            auctionEndDate
+            measurement
+            medium
+        }
+        notifications {
+            links {
+                app
+                url
+            }
+            message
+            tumbnail
+            recipientId
+            new
+            dateCreated
+        }
+    }
+}

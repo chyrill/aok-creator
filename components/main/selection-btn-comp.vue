@@ -17,6 +17,17 @@ export default {
         changeSelect(value) {
             this.select = value
         }
+    },
+    watch: {
+        select: function (val) {
+            if(val === 1) {
+                this.$emit('selection', 'all')
+            } else if (val === 2) {
+                this.$emit('selection', 'paid')
+            } else if (val === 3) {
+                this.$emit('selection', 'sold')
+            }
+        }
     }    
 }
 </script>

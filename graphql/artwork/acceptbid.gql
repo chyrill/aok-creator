@@ -1,0 +1,26 @@
+mutation acceptbid($id: ID!){
+    acceptbid(id: $id) {
+        _id
+        seller {
+            _id
+            profile {
+                _id
+                fullName
+            }
+        }
+        buyer {
+            _id
+            profile {
+                fullName
+            }
+        }
+        artwork {
+            _id
+            pictures
+            title
+        }
+        price
+        totalAmount
+        tax
+    }
+}

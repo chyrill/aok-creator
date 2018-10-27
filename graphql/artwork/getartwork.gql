@@ -1,0 +1,48 @@
+query getartwork($id: ID!) {
+    getartwork(id: $id) {
+        Model {
+            _id
+            pictures
+            title
+            price
+            description
+            year
+            medium
+            width
+            length
+            height
+            distanceUnit
+            campaignId
+            charityId
+            auctionDuration
+            address1
+            address2
+            city
+            state
+            postalCode
+            country
+            weight
+            weightUnit
+            pledge
+            sellingPrice
+            status
+            auctionEndDate
+            dateUpdated
+            dateCreated
+            bids {
+                totalCount
+                items {
+                    bidder {
+                        _id
+                        fullName
+                        displayPicture
+                    }
+                    amount
+                    dateCreated
+                }
+            }
+        }
+        Successful
+        Message
+    }
+}

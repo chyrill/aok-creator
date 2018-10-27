@@ -5,14 +5,18 @@
   "author": "al chyrill cabrera",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "HOST=0.0.0.0 PORT=3200 nuxt --no-deprecated",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-rc1",
+    "apollo-client": "^2.3.7",
     "axios": "^0.18.0",
+    "graphql-tag": "^2.9.2",
     "nuxt": "^1.0.0",
+    "socket.io-client": "^2.1.1",
     "vuelidate": "^0.7.4",
     "vuetify": "^1.0.0"
   },

@@ -1,0 +1,10 @@
+mutation endauction($id:  ID!) {
+    endauction(id: $id) {
+       Model {
+           _id
+           title
+       }
+       Successful
+       Message
+    }
+}

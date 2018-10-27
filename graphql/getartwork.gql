@@ -1,0 +1,46 @@
+query artwork($id: ID!) {
+    artwork(id: $id) {
+        pictures
+        title
+        _id
+        price
+        campaignId
+        description
+        category
+        year
+        medium
+        width
+        height
+        length
+        measurement
+        sellingPrice
+        bids {
+            totalCount
+            items {
+                amount
+                bidder {
+                    displayPicture
+                    fullName
+                }
+                dateCreated
+            }
+        }
+        auctionEndDate
+        charity {
+            _id
+        }
+        charityId
+        auctionDuration
+        pledge
+        address1
+        address2
+        city
+        state
+        postalCode
+        country
+        weight
+        weightUnit
+        status
+        dateUpdated
+    }
+}

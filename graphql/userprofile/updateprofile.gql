@@ -1,0 +1,33 @@
+mutation updateprofile($_id: ID!, $firstName: String, $lastName: String, $country: String, $city: String, $birthdate: String, $alias: String, $profileBanner: String, $displayPicture: String, $category:  String, $description: String, $gender: String, $mobileNumber: String,$state: String, $postalCode: String, $address1: String, $address2: String) {
+    updateprofile(data: {
+        _id: $_id
+        firstName: $firstName
+        lastName: $lastName
+        country: $country
+        city: $city
+        birthdate: $birthdate
+        alias: $alias
+        profileBanner: $profileBanner
+        displayPicture: $displayPicture
+        category: $category
+        description: $description
+        gender: $gender
+        mobileNumber: $mobileNumber
+        state: $state
+        postalCode: $postalCode
+        address1: $address1
+        address2: $address2
+    }) {
+        Model {
+            _id
+            firstName
+            lastName
+            fullName
+            country
+            city
+            displayPicture
+        }
+        Successful
+        Message
+    }
+}

@@ -11,9 +11,10 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'aok creator app' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/brand.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,900'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Nunito:400,700,900'},
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css'}
     ]
   },
   plugins: ['~/plugins/vuetify.js'],
@@ -29,7 +30,7 @@ module.exports = {
   */
   build: {
     vendor: [
-      '~/plugins/vuetify.js'
+      '~/plugins/vuetify.js', 'graphql-tag', 'apollo-client'
     ],
     extractCSS: true,
     /*
@@ -43,6 +44,17 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    }
+  },
+  modules: [
+    '@nuxtjs/apollo'
+  ],
+  apollo: {
+    includeNodeModules: true,
+    clientConfigs: {
+      default: {
+        httpEndpoint: "http://aok-backend.al:4000/graphql"
       }
     }
   }

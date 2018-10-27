@@ -1,0 +1,12 @@
+mutation createshippingtransaction($id: ID!) {
+    createshippingtransaction(id: $id) {
+        _id
+        orderId
+        shippingProviderId
+        trackingNumber
+        tracking_url_provider
+        label_url
+        estimated_days
+        dateCreated
+    }
+}

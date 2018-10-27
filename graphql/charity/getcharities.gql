@@ -1,0 +1,22 @@
+query getcharities($filter: String, $sort: String, $skip: Float, $limit: Float) {
+    getcharities(query: {
+        filter: $filter
+        sort: $sort
+        skip: $skip
+        limit: $limit
+    }) {
+        SearchItems {
+            _id
+            name
+            campaigns {
+                _id
+                name
+            }
+        }
+        TotalCount
+        NextPage
+        PreviousPage
+        Successful
+        Message
+    }
+}

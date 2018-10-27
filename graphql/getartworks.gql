@@ -1,0 +1,41 @@
+query getartworkbyuser($filter: String, $sort: [SortType], $skip: Float, $limit: Float) {
+    getartworkbyuser(
+        filter: $filter
+        sort: $sort
+        skip: $skip
+        limit: $limit
+    ) {
+        items {
+            _id
+            pictures
+            title
+            price
+            category
+            description
+            year 
+            medium
+            width
+            height
+            measurement
+            pledge
+            auctionEndDate
+            status
+            dateCreated
+            charity {
+                _id
+                name
+            }
+            dateUpdated
+            address1
+            city
+            state
+            postalCode
+            country
+            weight
+            weightUnit
+        }
+        totalCount
+        nextPage
+        previousPage
+    }
+}

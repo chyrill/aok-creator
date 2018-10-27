@@ -1,0 +1,10 @@
+mutation extendauction($id: ID!, $days: Float) {
+    extendauction(data: {
+        id: $id
+        days: $days
+    }) {
+        _id
+        title
+        pictures
+    }
+}

@@ -1,0 +1,48 @@
+mutation updateartwork($_id: ID!,$pictures: [String], $title: String, $price: Float, $category: ArtworkCategoryEnum!, $description: String, $year: String, $measurement: String, $width: Float, $height: Float, $medium: String, $campaignId: String, $pledge: Float, $auctionDuration: Float, $weight: Float, $weightUnit: String, $address1: String, $city: String, $state: String, $postalCode: String, $country: String, $address2: String, $length: String) {
+    updateartwork(data:{
+        _id: $_id
+        pictures: $pictures
+        title: $title
+        price: $price
+        category: $category
+        description: $description
+        year: $year
+        measurement: $measurement
+        width: $width
+        height: $height
+        medium: $medium
+        length: $length
+        campaignId: $campaignId
+        pledge: $pledge
+        auctionDuration: $auctionDuration
+        weight: $weight
+        weightUnit: $weightUnit
+        address1: $address1
+        address2: $address2
+        city: $city
+        state: $state
+        postalCode: $postalCode
+        country: $country
+    }) {
+        _id
+        pictures
+        title
+        price
+        category
+        description
+        year
+        measurement
+        width
+        height
+        medium
+        campaignId
+        pledge
+        auctionDuration
+        auctionEndDate
+        charity {
+            _id
+            name
+        }
+        dateCreated
+    }
+}

@@ -1,0 +1,36 @@
+query getmyprofile{
+    getmyprofile {
+        Model {
+            _id
+            profile {
+                _id
+                firstName
+                lastName
+                fullName
+                displayPicture
+                profileBanner
+                country
+                birthdate
+                postalCode
+                address1
+                address2
+                city
+                state
+                description
+                alias
+                gender
+                category
+            }
+            notifications {
+                new
+                message
+                link {
+                    app
+                    url
+                }
+                thumbnail
+                dateCreated
+            }
+        }
+    }
+}

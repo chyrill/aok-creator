@@ -1,0 +1,9 @@
+mutation readnotification {
+    readnotification {
+        Model {
+            message
+        }
+        Successful
+        Message
+    }
+}

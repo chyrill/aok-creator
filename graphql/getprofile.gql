@@ -1,0 +1,54 @@
+query{
+    userprofile {
+        profile{
+            _id
+            firstName
+            lastName
+            displayPicture
+            profileBanner
+            city
+            country
+            description
+            alias
+            category
+            birthdate
+            gender
+            fullName
+            address1
+            address2
+            state
+            postalCode
+        }
+        artworks{
+            _id
+            title
+            year
+            price
+            measurement
+            width
+            height
+            charity {
+                _id
+                name
+            }
+            pledge
+            auctionEndDate
+            measurement
+            medium
+        }
+        notifications {
+            links {
+                app
+                url
+            }
+            message
+            tumbnail
+            recipientId
+            new
+            dateCreated
+        }
+        balance
+        withdrawals
+    }
+   
+}

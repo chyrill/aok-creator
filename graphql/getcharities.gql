@@ -1,0 +1,12 @@
+query{
+    charities{
+        _id
+        profile{
+            name
+            campaigns{
+                _id
+                name
+            }
+        }
+    }
+}
